@@ -28,7 +28,7 @@ The static website is exported to `out/`.
 `next.config.ts` detects the GitHub Actions repository name and sets `basePath` for project Pages. If using the special `oyaon.github.io` repository, no project prefix is applied. Verify the final URL and asset paths after the first deployment.
 
 ## Before launch
-Read `docs/CONTENT-AUDIT.md`. Some project descriptions are deliberately conservative and links are not yet attached to project cards. Replace generated abstract artwork with real screenshots or evidence-based visuals; don't publish unsupported metrics. Validate the current CV, dates, project URLs, privacy and mobile behaviour.
+Read `docs/CONTENT-AUDIT.md` for the content sources and remaining evidence checks. The experience, education, certifications, and five selected projects follow the ATS Master CV supplied on 2026-10-13. Replace the illustrative project artwork with real screenshots before presenting it as captured product UI; do not publish unsupported metrics. The CV's current portfolio URL should be updated to `https://oyaon.github.io/oyaon-portfolio-next/` in its next revision.
 
 ## Static export limitation
 GitHub Pages serves static files; server-only features such as API routes, server actions, middleware and default Next.js image optimisation are not available in this configuration. See the official guide: https://nextjs.org/docs/app/guides/static-exports
