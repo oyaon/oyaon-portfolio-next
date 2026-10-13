@@ -1,5 +1,7 @@
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+import { HeroScene } from '@/components/HeroScene';
 import { ProjectCard } from '@/components/ProjectCard';
+import { RevealSection } from '@/components/RevealSection';
 import { projects } from '@/lib/projects';
 
 export default function Home() {
@@ -10,14 +12,14 @@ export default function Home() {
           OS<span>®</span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#work">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
-          <a href="#approach">Approach</a>
-          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <a className="header-contact" href="#contact">
-          Let’s talk <ArrowUpRight size={15} />
+        <a className="header-contact" href="mailto:oyaon.sultan07@gmail.com">
+          Let’s talk <ArrowUpRight size={15} aria-hidden="true" />
         </a>
       </header>
 
@@ -26,49 +28,48 @@ export default function Home() {
           <span>INDEPENDENT BUILDER · DHAKA, BD</span>
           <span>SOFTWARE / AI / B2B GROWTH</span>
         </div>
-        <div className="hero-title-wrap">
-          <p className="eyebrow">I BUILD DIGITAL SYSTEMS THAT MAKE SENSE.</p>
+        <HeroScene />
+        <div className="hero-content">
+          <p className="eyebrow"><span className="eyebrow-index">01</span> PORTFOLIO / 2026</p>
           <h1>
             Curiosity
             <br />
             into <em>capability.</em>
           </h1>
-          <div className="hero-stamp" aria-hidden="true">
-            <span>RESEARCH</span>
-            <b>×</b>
-            <span>ENGINEERING</span>
-            <b>×</b>
-            <span>GROWTH</span>
-          </div>
-        </div>
-        <div className="hero-bottom">
-          <p>
+          <p className="hero-summary">
             I&apos;m Oyaon Sultan, a Computer Science and Engineering graduate working across software
             development, applied AI, and B2B business development.
           </p>
-          <a href="#work" className="round-link" aria-label="Explore selected work">
-            <ArrowDownRight size={23} />
-          </a>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">
+              Explore selected work <ArrowDownRight size={17} aria-hidden="true" />
+            </a>
+            <a className="text-link" href="https://github.com/oyaon" target="_blank" rel="noreferrer">
+              GitHub profile <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+          </div>
         </div>
-        <div className="hero-rule">
-          <span>PORTFOLIO / 2026</span>
-          <span>BUILD WITH INTENT.</span>
+        <div className="hero-bottomline">
+          <span>RESEARCH <b>×</b> ENGINEERING <b>×</b> GROWTH</span>
+          <a href="#work" aria-label="Scroll to selected projects">
+            SCROLL TO EXPLORE <span aria-hidden="true">↓</span>
+          </a>
         </div>
       </section>
 
-      <section className="work-section section-shell" id="work">
+      <RevealSection id="work" className="work-section section-shell">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">01 — SELECTED PROJECTS</p>
+            <p className="eyebrow"><span className="eyebrow-index">01</span> SELECTED PROJECTS</p>
             <h2>
-              Ideas, made
+              Built with
               <br />
-              <em>tangible.</em>
+              <em>intention.</em>
             </h2>
           </div>
           <p className="section-note">
-            Five projects across software, search, and applied AI. Source and demo links are included
-            where they could be matched to the project.
+            Software, search, and applied AI experiments. Explore the source or live demos where
+            available.
           </p>
         </div>
         <div className="project-grid">
@@ -80,25 +81,33 @@ export default function Home() {
           <span className="note-dot" /> Dengue forecasting results are experimental and have not been
           independently reproduced.
         </p>
-      </section>
+      </RevealSection>
 
-      <section className="experience-section section-shell" id="experience">
-        <div className="resume-heading">
-          <p className="eyebrow">02 — PROFESSIONAL EXPERIENCE</p>
-          <h2>
-            Work
-            <br />
-            <em>experience.</em>
-          </h2>
+      <RevealSection id="experience" className="experience-section section-shell">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow"><span className="eyebrow-index">02</span> PROFESSIONAL EXPERIENCE</p>
+            <h2>
+              People,
+              <br />
+              <em>problems, progress.</em>
+            </h2>
+          </div>
+          <p className="section-note">
+            Building technical products and helping teams find the people who need them.
+          </p>
         </div>
         <div className="experience-list">
           <article className="experience-item">
             <div className="experience-meta">
               <p className="eyebrow">JUL 2026 — PRESENT</p>
-              <p>Appiex · Remote</p>
+              <p>REMOTE</p>
             </div>
-            <div>
-              <h3>Business Development Executive</h3>
+            <div className="experience-role">
+              <div className="role-heading">
+                <h3>Business Development Executive</h3>
+                <span>APPIEX</span>
+              </div>
               <ul>
                 <li>
                   Research and qualify prospective clients for website design and development
@@ -118,18 +127,19 @@ export default function Home() {
           <article className="experience-item">
             <div className="experience-meta">
               <p className="eyebrow">MAR 2026 — JUN 2026</p>
-              <p>Prospect Engine LLC · Remote</p>
+              <p>REMOTE</p>
             </div>
-            <div>
-              <h3>Sales &amp; Marketing Intern</h3>
+            <div className="experience-role">
+              <div className="role-heading">
+                <h3>Sales &amp; Marketing Intern</h3>
+                <span>PROSPECT ENGINE LLC</span>
+              </div>
               <ul>
                 <li>
                   Researched target companies and built prospect lists against ideal customer
                   profile criteria.
                 </li>
-                <li>
-                  Supported personalized LinkedIn and email outreach, including follow-ups.
-                </li>
+                <li>Supported personalized LinkedIn and email outreach, including follow-ups.</li>
                 <li>Organized prospect data in Apollo and HubSpot CRM and reviewed messaging.</li>
               </ul>
             </div>
@@ -137,16 +147,22 @@ export default function Home() {
           <article className="experience-item">
             <div className="experience-meta">
               <p className="eyebrow">JAN 2026 — MAR 2026</p>
-              <p>Prospect Engine LLC · Remote</p>
+              <p>REMOTE</p>
             </div>
-            <div>
-              <h3>Sales Development Intern</h3>
+            <div className="experience-role">
+              <div className="role-heading">
+                <h3>Sales Development Intern</h3>
+                <span>PROSPECT ENGINE LLC</span>
+              </div>
               <ul>
                 <li>
                   Built targeted lead lists by researching founders and decision-makers in selected
                   industries.
                 </li>
-                <li>Assisted with personalized LinkedIn outreach, follow-up messages, and prospect research.</li>
+                <li>
+                  Assisted with personalized LinkedIn outreach, follow-up messages, and prospect
+                  research.
+                </li>
                 <li>
                   Recorded prospect information and supported campaign monitoring and conversation
                   continuity.
@@ -157,32 +173,34 @@ export default function Home() {
           <article className="experience-item">
             <div className="experience-meta">
               <p className="eyebrow">FEB 2025 — JUN 2025</p>
-              <p>SOFTDEFT · Dhaka, on-site</p>
+              <p>DHAKA · ON-SITE</p>
             </div>
-            <div>
-              <h3>Software Engineer Intern</h3>
+            <div className="experience-role">
+              <div className="role-heading">
+                <h3>Software Engineer Intern</h3>
+                <span>SOFTDEFT</span>
+              </div>
               <ul>
                 <li>
                   Built a PHP and MySQL Library Management System designed for a catalog of 3,500+
                   books and 400+ users.
                 </li>
                 <li>Designed normalized schemas for inventory, users, and transaction tracking.</li>
-                <li>
-                  Developed authentication, role-based access control, and server-side validation.
-                </li>
+                <li>Developed authentication, role-based access control, and server-side validation.</li>
               </ul>
             </div>
           </article>
           <article className="experience-item">
             <div className="experience-meta">
               <p className="eyebrow">2022 — PRESENT</p>
-              <p>Independent · Community pages</p>
+              <p>INDEPENDENT</p>
             </div>
-            <div>
-              <h3>Social Media Manager &amp; Content Creator</h3>
-              <p className="experience-detail">
-                Bashundhara Shuvosangho and Gobindaganj Public Library
-              </p>
+            <div className="experience-role">
+              <div className="role-heading">
+                <h3>Social Media Manager &amp; Content Creator</h3>
+                <span>COMMUNITY PAGES</span>
+              </div>
+              <p className="experience-detail">Bashundhara Shuvosangho and Gobindaganj Public Library</p>
               <ul>
                 <li>
                   Planned and wrote posts, designed graphics in Canva, and edited short videos in
@@ -196,55 +214,57 @@ export default function Home() {
             </div>
           </article>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="approach-section section-shell" id="approach">
-        <p className="eyebrow">03 — HOW I THINK</p>
-        <div className="approach-grid">
+      <RevealSection id="approach" className="approach-section section-shell">
+        <div className="approach-heading">
+          <p className="eyebrow"><span className="eyebrow-index">03</span> HOW I THINK</p>
           <h2>
             Good work lives
             <br />
             between <em>disciplines.</em>
           </h2>
-          <div className="approach-copy">
-            <p>
-              I like understanding the problem before choosing the tool. Sometimes that means
-              building an API. Sometimes it means testing a forecasting approach, studying the data,
-              or improving how a digital service reaches people.
-            </p>
-            <div className="principle">
-              <span>01</span>
-              <div>
-                <h3>Understand the system</h3>
-                <p>Map the user, constraints, data and desired outcome before building.</p>
-              </div>
+        </div>
+        <div className="approach-copy">
+          <p>
+            I like understanding the problem before choosing the tool. Sometimes that means
+            building an API. Sometimes it means testing a forecasting approach, studying the data,
+            or improving how a digital service reaches people.
+          </p>
+          <div className="principle">
+            <span>01</span>
+            <div>
+              <h3>Understand the system</h3>
+              <p>              Map the user, constraints, data and desired outcome before building.</p>
             </div>
-            <div className="principle">
-              <span>02</span>
-              <div>
-                <h3>Make the work inspectable</h3>
-                <p>Readable code, honest metrics and clear documentation beat vague claims.</p>
-              </div>
+          </div>
+          <div className="principle">
+            <span>02</span>
+            <div>
+              <h3>Make the work inspectable</h3>
+              <p>              Readable code, honest metrics and clear documentation beat vague claims.</p>
             </div>
-            <div className="principle">
-              <span>03</span>
-              <div>
-                <h3>Ship with purpose</h3>
-                <p>Build the smallest useful version, test it, then improve it from evidence.</p>
-              </div>
+          </div>
+          <div className="principle">
+            <span>03</span>
+            <div>
+              <h3>Ship with purpose</h3>
+              <p>Build the smallest useful version, test it, then improve it from evidence.</p>
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="education-section section-shell" id="education">
-        <div className="resume-heading">
-          <p className="eyebrow">04 — EDUCATION &amp; CERTIFICATIONS</p>
-          <h2>
-            Keep
-            <br />
-            <em>learning.</em>
-          </h2>
+      <RevealSection id="education" className="education-section section-shell">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow"><span className="eyebrow-index">04</span> EDUCATION &amp; LEARNING</p>
+            <h2>
+              A foundation
+              <br />
+              for <em>what’s next.</em>
+            </h2>
+          </div>
         </div>
         <div className="education-grid">
           <div className="education-column">
@@ -281,12 +301,12 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="about-section section-shell" id="about">
-        <div className="about-label">
-          <p className="eyebrow">05 — A LITTLE CONTEXT</p>
-          <span>CSE GRADUATE / DHAKA, BANGLADESH</span>
+      <RevealSection id="about" className="about-section section-shell">
+        <div className="about-index">
+          <p className="eyebrow"><span className="eyebrow-index">05</span> A LITTLE CONTEXT</p>
+          <span>BASED IN DHAKA, BANGLADESH</span>
         </div>
         <div className="about-content">
           <h2>
@@ -300,39 +320,47 @@ export default function Home() {
           </p>
           <div className="about-links">
             <a href="https://github.com/oyaon" target="_blank" rel="noreferrer">
-              GitHub <ArrowUpRight size={15} />
+              GitHub <ArrowUpRight size={15} aria-hidden="true" />
             </a>
             <a href="https://www.linkedin.com/in/oyaonsultan07" target="_blank" rel="noreferrer">
-              LinkedIn <ArrowUpRight size={15} />
+              LinkedIn <ArrowUpRight size={15} aria-hidden="true" />
             </a>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="contact-section section-shell" id="contact">
-        <p className="eyebrow">06 — HAVE A GOOD PROBLEM?</p>
-        <h2>
-          Let’s make
-          <br />
-          <em>something useful.</em>
-        </h2>
-        <p className="contact-sub">
-          Open to suitable software, AI, data, and business development opportunities.
-        </p>
-        <a className="email-link" href="mailto:oyaon.sultan07@gmail.com">
-          <Mail size={18} /> oyaon.sultan07@gmail.com <ArrowUpRight size={17} />
-        </a>
-        <div className="contact-socials">
-          <a href="https://github.com/oyaon" target="_blank" rel="noreferrer">
-            <Github size={17} /> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/oyaonsultan07" target="_blank" rel="noreferrer">
-            <Linkedin size={17} /> LinkedIn
-          </a>
+      <RevealSection id="contact" className="contact-section section-shell">
+        <div className="contact-grid">
+          <div>
+            <p className="eyebrow"><span className="eyebrow-index">06</span> HAVE A GOOD PROBLEM?</p>
+            <h2>
+              Let’s make
+              <br />
+              <em>something useful.</em>
+            </h2>
+          </div>
+          <div className="contact-details">
+            <p>Open to suitable software, AI, data, and business development opportunities.</p>
+            <a className="email-link" href="mailto:oyaon.sultan07@gmail.com">
+              <Mail size={18} aria-hidden="true" /> oyaon.sultan07@gmail.com{' '}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </a>
+            <div className="contact-socials">
+              <a href="https://github.com/oyaon" target="_blank" rel="noreferrer">
+                <Github size={17} aria-hidden="true" /> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/oyaonsultan07" target="_blank" rel="noreferrer">
+                <Linkedin size={17} aria-hidden="true" /> LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+      </RevealSection>
 
       <footer className="site-footer">
+        <a className="wordmark" href="#top" aria-label="Back to top">
+          OS<span>®</span>
+        </a>
         <span>© 2026 OYAON SULTAN</span>
         <span>MADE WITH INTENTION, NOT NOISE.</span>
         <a href="#top">BACK TO TOP ↑</a>

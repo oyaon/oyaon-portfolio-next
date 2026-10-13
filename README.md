@@ -1,6 +1,6 @@
 # Oyaon Sultan — Portfolio (Next.js)
 
-A new portfolio starter using Next.js App Router, TypeScript, Tailwind CSS v4 and static export for GitHub Pages. The art direction is editorial, restrained and concept-led, with a warm paper palette and acid-green accent.
+A Next.js App Router portfolio using TypeScript and static export for GitHub Pages. The visual direction is cinematic and editorial, with a charcoal palette, lime accents, restrained motion and a procedural 3D hero with a CSS fallback.
 
 ## Requirements
 - Node.js 20.9+ (Node 22 recommended)
